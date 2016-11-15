@@ -120,6 +120,7 @@ class RedisConnection(object):
         return obj.obj
 
 
+# FIXME Register with ZCML
 
 GSM=getGlobalSiteManager()
 
