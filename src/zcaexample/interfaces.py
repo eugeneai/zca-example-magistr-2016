@@ -11,8 +11,15 @@ class IPeople(Interface):
         """Печатает Ф.И.О. человека
         """
 
+class IGroup(Interface):
+    name = Attribute("Название группы")
+    def add(people):
+        """Add a person into the group.
+        """
+
+
 class IStorableObject(Interface):
-    """Данный объектя могут быть записаны в
+    """Данный объекты могут быть записаны в
     компонент, реализующий IDBConnection.
     """
 

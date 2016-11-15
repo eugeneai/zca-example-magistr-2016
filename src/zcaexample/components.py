@@ -27,6 +27,22 @@ class People(Animal):
             return False
         return True
 
+"""
+@implementer(IGroup)
+class Group(....):
+    def __init__(self, name):
+        self.name = name
+
+class AdapterIGroupToIStorableObject(object):
+    __init__(... obj)
+
+
+    def save_into(self, conn):
+
+    def load_from(self, conn):
+
+"""
+
 @implementer(IStorableObject)
 @adapter(IPeople)
 class AdapterForIPeopleToIStorableObject(object):
@@ -101,7 +117,7 @@ class RedisConnection(object):
         cls=globals()[class_name]
         obj=cls(id=key)
         obj.load_from(self)
-        return obj
+        return obj.obj
 
 
 

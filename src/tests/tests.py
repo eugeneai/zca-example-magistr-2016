@@ -46,5 +46,5 @@ class TestAdapterForIPeopleToIStorableObject(object):
         assert _id is not None
         print("Saved as:", _id)
         o = self.conn.load(_id)
-        print (o.obj, self.p)
-        assert o.obj == self.p
+        print (o, self.p)
+        assert o == self.p
